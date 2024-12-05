@@ -1,0 +1,26 @@
+HKCR
+{
+	Lb34MyFn.1 = s 'MyFn class'
+	{
+		CLSID = s '{0f1cdf4b-a1c1-4eea-9591-1603887420f5}'
+	}
+	Lb34MyFn = s 'MyFn class'
+	{		
+		CurVer = s 'Lb34MyFn.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0f1cdf4b-a1c1-4eea-9591-1603887420f5} = s 'MyFn class'
+		{
+			ProgID = s 'Lb34MyFn.1'
+			VersionIndependentProgID = s 'Lb34MyFn'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{130359b8-01b9-46c8-a663-38b43f54af28}'
+			Version = s '1.0'
+		}
+	}
+}

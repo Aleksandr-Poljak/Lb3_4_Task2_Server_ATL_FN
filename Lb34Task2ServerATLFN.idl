@@ -1,0 +1,41 @@
+﻿// Lb3_4_Task2_Server_ATL_FN.idl: источник языка IDL для Lb3_4_Task2_Server_ATL_FN
+//
+
+// Этот файл будет обработан средством MIDL для
+// создание библиотеки типов ($handlersafeidlname$.tlb) и кода маршалирования.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(45027e73-eb34-4a88-9980-26dfff2c20b4),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IMyFn : IDispatch
+{
+	[id(1), helpstring("Метод Fun141")] HRESULT Fun141([in] INT x, [in] INT y, [out, retval] DOUBLE* z);
+
+	[id(2), helpstring("Метод Fun142")] HRESULT Fun142([in] INT x, [in] INT y, [in] INT c, [out, retval] INT* z);
+
+	[id(3), helpstring("Метод Fun143")] HRESULT Fun143([in] DOUBLE in, [out] DOUBLE* out);
+};
+[
+	uuid(130359b8-01b9-46c8-a663-38b43f54af28),
+	version(1.0),
+]
+library Lb34Task2ServerATLFNLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(0f1cdf4b-a1c1-4eea-9591-1603887420f5)
+	]
+	coclass MyFn
+	{
+		[default] interface IMyFn;
+	};
+};
+
+import "shobjidl.idl";
