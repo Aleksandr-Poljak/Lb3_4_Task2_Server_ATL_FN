@@ -109,7 +109,7 @@ EXTERN_C const IID IID_IMyFn;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Fun143( 
             /* [in] */ DOUBLE in,
-            /* [out] */ DOUBLE *out) = 0;
+            /* [retval][out] */ DOUBLE *out) = 0;
         
     };
     
@@ -195,7 +195,7 @@ EXTERN_C const IID IID_IMyFn;
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Fun143 )( 
             IMyFn * This,
             /* [in] */ DOUBLE in,
-            /* [out] */ DOUBLE *out);
+            /* [retval][out] */ DOUBLE *out);
         
         END_INTERFACE
     } IMyFnVtbl;

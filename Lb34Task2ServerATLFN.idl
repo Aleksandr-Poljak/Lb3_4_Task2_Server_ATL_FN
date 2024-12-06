@@ -20,7 +20,7 @@ interface IMyFn : IDispatch
 
 	[id(2), helpstring("Метод Fun142")] HRESULT Fun142([in] INT x, [in] INT y, [in] INT c, [out, retval] INT* z);
 
-	[id(3), helpstring("Метод Fun143")] HRESULT Fun143([in] DOUBLE in, [out] DOUBLE* out);
+	[id(3), helpstring("Метод Fun143")] HRESULT Fun143([in] DOUBLE in, [out, retval] DOUBLE* out);
 };
 [
 	uuid(130359b8-01b9-46c8-a663-38b43f54af28),
